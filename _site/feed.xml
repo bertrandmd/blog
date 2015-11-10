@@ -6,9 +6,488 @@
 </description>
     <link>http://127.0.0.1:4000/</link>
     <atom:link href="http://127.0.0.1:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 10 Nov 2015 15:05:31 +0100</pubDate>
-    <lastBuildDate>Tue, 10 Nov 2015 15:05:31 +0100</lastBuildDate>
-    <generator>Jekyll v3.0.0</generator>
+    <pubDate>Tue, 10 Nov 2015 16:45:35 +0100</pubDate>
+    <lastBuildDate>Tue, 10 Nov 2015 16:45:35 +0100</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>REV</title>
+        <description>&lt;script src=&quot;/js/Chart_ext.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;/js/embed-charts_ext.js&quot;&gt;&lt;/script&gt;
+
+&lt;style&gt;
+table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.figure {
+  overflow: auto;
+  margin: 1em 0;
+}
+
+.figure table {
+  margin: 0;
+}
+
+.figure &gt; input {
+  display: none;
+}
+
+.figure &gt; .tabs {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.tabs {
+  border-bottom: solid 1px #aaa;
+  font-size: 14px;
+}
+
+.tabs label {
+  display: inline-block;
+  background: #ddd;
+  border: solid 1px #aaa;
+  border-radius: 5px 5px 0 0;
+  padding: 1px 4px 0;
+  margin: 1px 3px -3px;
+}
+
+.view_table:checked ~ .tabs .view_table,
+.view_chart:checked ~ .tabs .view_chart {
+  background: #fff;
+  border-bottom: none;
+  padding-bottom: 1px;
+}
+
+.figure &gt; table, .figure &gt; canvas {
+  clear: right;
+  float: left;
+  margin-right: -100%;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 500ms;
+}
+
+.figure .view_table:checked ~ table,
+.figure .view_chart:checked ~ canvas {
+  opacity: 1;
+  pointer-events: auto;
+}
+&lt;/style&gt;
+
+&lt;h1 id=&quot;table-test&quot;&gt;Table test&lt;/h1&gt;
+
+&lt;div data-figure=&quot;chart&quot; data-focus=&quot;chart&quot;&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;City&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Whites&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Blacks&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Hispanics&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Asians&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Other&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;New York&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;33.3%&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;23.0%&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;28.6%&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;12.7%&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;2.4%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Chicago&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;31.7%&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;19.6%&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;28.9%&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;5.5%&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;14.3%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;San Francisco&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;41.9%&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;6.1%&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;15.1%&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;33.3%&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;3.6%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Seattle&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;66.3%&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;7.9%&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;6.6%&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;13.8%&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;5.4%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Paris&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;41.9%&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;6.1%&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;15.1%&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;33.3%&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;3.6%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Rio&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;66.3%&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;7.9%&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;6.6%&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;13.8%&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;5.4%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div data-figure=&quot;chart&quot; data-type=&quot;line&quot; data-series=&quot;col&quot; data-focus=&quot;chart&quot; data-bezier-curve=&quot;0.3&quot;&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;jour&lt;/th&gt;
+      &lt;th&gt;temperatureMax&lt;/th&gt;
+      &lt;th&gt;temperatureMin&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lundi&lt;/td&gt;
+      &lt;td&gt;12&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Mardi&lt;/td&gt;
+      &lt;td&gt;17&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Mercredi&lt;/td&gt;
+      &lt;td&gt;15&lt;/td&gt;
+      &lt;td&gt;11&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Jeudi&lt;/td&gt;
+      &lt;td&gt;23&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Vendredi&lt;/td&gt;
+      &lt;td&gt;19&lt;/td&gt;
+      &lt;td&gt;14&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;figure&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;img src=&quot;/canvas.jpg&quot; alt=&quot;&quot;&amp;gt; 
+&amp;lt;figcaption&amp;gt;Fig1. - This is an example figcaption&amp;lt;/figcaption&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/figure&gt;
+
+&lt;div data-figure=&quot;chart&quot; data-focus=&quot;chart&quot; data-series=&quot;rows&quot;&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+
+
+
+	
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+	       	
+	      	
+	 	
+      &lt;th&gt;  Secteurs AIR-LR &lt;/th&gt;
+		
+      &lt;th&gt;  CO2 kg/an &lt;/th&gt;
+		
+      &lt;th&gt;  NOx kg/an &lt;/th&gt;
+		
+      &lt;th&gt;  PM10 kg/an &lt;/th&gt;
+		
+
+	
+
+
+	
+
+
+	
+
+
+	
+
+
+	
+
+
+	
+
+
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+
+    &lt;tr&gt;
+
+      &lt;td&gt;Agriculture. sylviculture et nature&lt;/td&gt;
+
+      &lt;td&gt;0.0252281753&lt;/td&gt;
+
+      &lt;td&gt;0.0914768379&lt;/td&gt;
+
+      &lt;td&gt;0.2622485303&lt;/td&gt;
+
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+
+      &lt;td&gt;Production et distribution d'énergie&lt;/td&gt;
+
+      &lt;td&gt;0.0496977949&lt;/td&gt;
+
+      &lt;td&gt;0.0250579091&lt;/td&gt;
+
+      &lt;td&gt;0.000290935&lt;/td&gt;
+
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+
+      &lt;td&gt;Industrie et traitement des déchets&lt;/td&gt;
+
+      &lt;td&gt;0.1917107791&lt;/td&gt;
+
+      &lt;td&gt;0.1115081464&lt;/td&gt;
+
+      &lt;td&gt;0.1857875255&lt;/td&gt;
+
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+
+      &lt;td&gt;Résidentiel et tertiaire&lt;/td&gt;
+
+      &lt;td&gt;0.2535107806&lt;/td&gt;
+
+      &lt;td&gt;0.0587616338&lt;/td&gt;
+
+      &lt;td&gt;0.2381024605&lt;/td&gt;
+
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+
+      &lt;td&gt;Transports non routiers&lt;/td&gt;
+
+      &lt;td&gt;0.0061603562&lt;/td&gt;
+
+      &lt;td&gt;0.0166124849&lt;/td&gt;
+
+      &lt;td&gt;0.0206730955&lt;/td&gt;
+
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+
+      &lt;td&gt;Transports routiers&lt;/td&gt;
+
+      &lt;td&gt;0.4736921138&lt;/td&gt;
+
+      &lt;td&gt;0.696582988&lt;/td&gt;
+
+      &lt;td&gt;0.2928974532&lt;/td&gt;
+
+    &lt;/tr&gt;
+
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div data-figure=&quot;chart&quot; data-type=&quot;pie&quot; data-focus=&quot;chart&quot; data-series=&quot;rows&quot;&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+
+
+
+	
+
+		
+
+		
+
+		
+
+		
+
+		
+
+	       	
+	      	
+	 	
+      &lt;th&gt;  Secteurs AIR-LR &lt;/th&gt;
+		
+      &lt;th&gt;  CO2 kg/an &lt;/th&gt;
+		
+
+	
+
+
+	
+
+
+	
+
+
+	
+
+
+	
+
+
+	
+
+
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+
+    &lt;tr&gt;
+
+      &lt;td&gt;Agriculture. sylviculture et nature&lt;/td&gt;
+
+      &lt;td&gt;309837892.484127&lt;/td&gt;
+
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+
+      &lt;td&gt;Production et distribution d'énergie&lt;/td&gt;
+
+      &lt;td&gt;610359642.5&lt;/td&gt;
+
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+
+      &lt;td&gt;Industrie et traitement des déchets&lt;/td&gt;
+
+      &lt;td&gt;2354481175.7439&lt;/td&gt;
+
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+
+      &lt;td&gt;Résidentiel et tertiaire&lt;/td&gt;
+
+      &lt;td&gt;3113473137.17102&lt;/td&gt;
+
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+
+      &lt;td&gt;Transports non routiers&lt;/td&gt;
+
+      &lt;td&gt;75657940.9962762&lt;/td&gt;
+
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+
+      &lt;td&gt;Transports routiers&lt;/td&gt;
+
+      &lt;td&gt;5817613230.85189&lt;/td&gt;
+
+    &lt;/tr&gt;
+
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;label&lt;/th&gt;
+      &lt;th&gt;value&lt;/th&gt;
+      &lt;th&gt;a&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;rester&lt;/td&gt;
+      &lt;td&gt;2345&lt;/td&gt;
+      &lt;td&gt;545&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;routier&lt;/td&gt;
+      &lt;td&gt;435&lt;/td&gt;
+      &lt;td&gt;54&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;agri&lt;/td&gt;
+      &lt;td&gt;456&lt;/td&gt;
+      &lt;td&gt;545&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;indus&lt;/td&gt;
+      &lt;td&gt;213&lt;/td&gt;
+      &lt;td&gt;21654&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+</description>
+        <pubDate>Tue, 10 Nov 2015 00:00:00 +0100</pubDate>
+        <link>http://127.0.0.1:4000/2015/11/10/tableau3.html</link>
+        <guid isPermaLink="true">http://127.0.0.1:4000/2015/11/10/tableau3.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>debut methodo</title>
@@ -100,6 +579,232 @@
       </item>
     
       <item>
+        <title>Méthodo</title>
+        <description>&lt;p&gt;#Méthodologie Générale&lt;br /&gt;
+(: .no_toc)&lt;/p&gt;
+
+&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;h2 id=&quot;secteur-autres-transports&quot;&gt;Secteur Autres Transports&lt;/h2&gt;
+&lt;p&gt;Polusieurs méthodes sont à l’étude.&lt;br /&gt;
+Parmis celles là bous avons choisi kles deux suivvantes:&lt;br /&gt;
+-&lt;code class=&quot;highlighter-rouge&quot;&gt;Scaffoling&lt;/code&gt;&lt;br /&gt;
+-&lt;code class=&quot;highlighter-rouge&quot;&gt;Tombdown&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;liste :   &lt;br /&gt;
++ a  &lt;br /&gt;
++ b&lt;/p&gt;
+
+&lt;h3 id=&quot;bug&quot;&gt;bug&lt;/h3&gt;
+
+&lt;h1 id=&quot;ee&quot;&gt;ee&lt;/h1&gt;
+</description>
+        <pubDate>Tue, 10 Nov 2015 00:00:00 +0100</pubDate>
+        <link>http://127.0.0.1:4000/methodo/2015/11/10/M%C3%A9thodologie.html</link>
+        <guid isPermaLink="true">http://127.0.0.1:4000/methodo/2015/11/10/M%C3%A9thodologie.html</guid>
+        
+        <category>methodologie</category>
+        
+        
+        <category>methodo</category>
+        
+      </item>
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;
+  &lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 09 Nov 2015 16:29:41 +0100</pubDate>
+        <link>http://127.0.0.1:4000/jekyll/update/2015/11/09/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://127.0.0.1:4000/jekyll/update/2015/11/09/welcome-to-jekyll.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Création de tableaux</title>
+        <description>
+&lt;p&gt;adresse du tableau :&lt;/p&gt;
+</description>
+        <pubDate>Mon, 09 Nov 2015 15:37:24 +0100</pubDate>
+        <link>http://127.0.0.1:4000/tableau/2015/11/09/tableau.html</link>
+        <guid isPermaLink="true">http://127.0.0.1:4000/tableau/2015/11/09/tableau.html</guid>
+        
+        <category>toto</category>
+        
+        
+        <category>tableau</category>
+        
+      </item>
+    
+      <item>
+        <title>Music</title>
+        <description>&lt;p&gt;#Music&lt;br /&gt;
+pd&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+
+
+
+	
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		
+
+	       	
+	      	
+	 	
+      &lt;th&gt;  Secteurs AIR-LR &lt;/th&gt;
+		
+      &lt;th&gt;  CO2 kg/an &lt;/th&gt;
+		
+      &lt;th&gt;  NOx kg/an &lt;/th&gt;
+		
+      &lt;th&gt;  PM10 kg/an &lt;/th&gt;
+		
+
+	
+
+
+	
+
+
+	
+
+
+	
+
+
+	
+
+
+	
+
+
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+
+    &lt;tr&gt;
+
+      &lt;td&gt;Agriculture. sylviculture et nature&lt;/td&gt;
+
+      &lt;td&gt;309837892.484127&lt;/td&gt;
+
+      &lt;td&gt;3748705.7992283&lt;/td&gt;
+
+      &lt;td&gt;2608565.78364659&lt;/td&gt;
+
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+
+      &lt;td&gt;Production et distribution d'énergie&lt;/td&gt;
+
+      &lt;td&gt;610359642.5&lt;/td&gt;
+
+      &lt;td&gt;1026869&lt;/td&gt;
+
+      &lt;td&gt;2893.908265&lt;/td&gt;
+
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+
+      &lt;td&gt;Industrie et traitement des déchets&lt;/td&gt;
+
+      &lt;td&gt;2354481175.7439&lt;/td&gt;
+
+      &lt;td&gt;4569585.53110002&lt;/td&gt;
+
+      &lt;td&gt;1848014.1016282&lt;/td&gt;
+
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+
+      &lt;td&gt;Résidentiel et tertiaire&lt;/td&gt;
+
+      &lt;td&gt;3113473137.17102&lt;/td&gt;
+
+      &lt;td&gt;2408042.10486937&lt;/td&gt;
+
+      &lt;td&gt;2368386.70078124&lt;/td&gt;
+
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+
+      &lt;td&gt;Transports non routiers&lt;/td&gt;
+
+      &lt;td&gt;75657940.9962762&lt;/td&gt;
+
+      &lt;td&gt;680776.902962448&lt;/td&gt;
+
+      &lt;td&gt;205633.676524087&lt;/td&gt;
+
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+
+      &lt;td&gt;Transports routiers&lt;/td&gt;
+
+      &lt;td&gt;5817613230.85189&lt;/td&gt;
+
+      &lt;td&gt;28545856.4834598&lt;/td&gt;
+
+      &lt;td&gt;2913428.24215873&lt;/td&gt;
+
+    &lt;/tr&gt;
+
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+</description>
+        <pubDate>Mon, 09 Nov 2015 00:00:00 +0100</pubDate>
+        <link>http://127.0.0.1:4000/2015/11/09/tableau2.html</link>
+        <guid isPermaLink="true">http://127.0.0.1:4000/2015/11/09/tableau2.html</guid>
+        
+        
+      </item>
+    
+      <item>
         <title>Un peu de réflexion</title>
         <description>&lt;h1 id=&quot;et-pourquoi-pas-&quot;&gt;Et pourquoi pas ?&lt;/h1&gt;
 
@@ -124,19 +829,19 @@ Si le &lt;code class=&quot;highlighter-rouge&quot;&gt;choix&lt;/code&gt; est &lt
 
 &lt;p class=&quot;clear&quot;&gt;blabla&lt;/p&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
-  $(&#39;.photoset-grid-lightbox&#39;).photosetGrid({
+  $('.photoset-grid-lightbox').photosetGrid({
     highresLinks: true,
-    rel: &#39;withhearts-gallery&#39;,
-    gutter: &#39;2px&#39;,
-    layout: &#39;444444444444444444444444&#39;,
+    rel: 'withhearts-gallery',
+    gutter: '2px',
+    layout: '444444444444444444444444',
     lowresWidth: 300,
     onComplete: function(){
-      $(&#39;.photoset-grid-lightbox&#39;).attr(&#39;style&#39;, &#39;&#39;);
-      $(&#39;.photoset-grid-lightbox a&#39;).colorbox({
+      $('.photoset-grid-lightbox').attr('style', '');
+      $('.photoset-grid-lightbox a').colorbox({
         photo: true,
         scalePhotos: true,
-                maxHeight:&#39;90%&#39;,
-                maxWidth:&#39;90%&#39;
+                maxHeight:'90%',
+                maxWidth:'90%'
       });
     }
   });
@@ -280,522 +985,11 @@ var myLineChart = new Chart(ctx).Line(data);
 
 </description>
         <pubDate>Fri, 06 Nov 2015 00:00:00 +0100</pubDate>
-        <link>http://127.0.0.1:4000/divers/burnout.html</link>
-        <guid isPermaLink="true">http://127.0.0.1:4000/divers/burnout.html</guid>
+        <link>http://127.0.0.1:4000/divers/burnOut.html</link>
+        <guid isPermaLink="true">http://127.0.0.1:4000/divers/burnOut.html</guid>
         
         
         <category>divers</category>
-        
-      </item>
-    
-      <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;
-  &lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 05 Nov 2015 07:31:01 +0100</pubDate>
-        <link>http://127.0.0.1:4000/jekyll/update/2015/11/05/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://127.0.0.1:4000/jekyll/update/2015/11/05/welcome-to-jekyll.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>2e Jour</title>
-        <description>&lt;h1 id=&quot;jour-2&quot;&gt;Jour 2&lt;/h1&gt;
-
-&lt;h2 id=&quot;la-suite-de-nos-aventure&quot;&gt;La suite de nos aventure&lt;/h2&gt;
-
-&lt;p&gt;../../../photos/firstday/DSC_0007.JPG../../../photos/firstday/DSC_0013.JPG../../../photos/firstday/DSC_0021.JPG&lt;/p&gt;
-
-&lt;p class=&quot;left&quot;&gt;&lt;img src=&quot;/photos/firstday/DSC_0013.JPG&quot; alt=&quot;toto&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;blablabla&lt;br /&gt;
-blablabla&lt;br /&gt;
-et ca aussi&lt;/p&gt;
-
-&lt;div class=&quot;photoset-grid-lightbox&quot; data-layout=&quot;3&quot;&gt;
-
-  &lt;p&gt;&lt;a class=&quot;blahblah&quot; href=&quot;../../../photos/firstday/DSC_0010.JPG&quot; data-title=&quot;../../../photos/firstday/DSC_0010.JPG&quot; data-lightbox=&quot;gallery1&quot;&gt;
-&lt;img class=&quot;blahblah&quot; alt=&quot;&quot; src=&quot;../../../photos/firstday/DSC_0010.JPG&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;a class=&quot;blahblah&quot; href=&quot;../../../photos/firstday/DSC_0011.JPG&quot; data-title=&quot;../../../photos/firstday/DSC_0011.JPG&quot; data-lightbox=&quot;gallery1&quot;&gt;
-&lt;img class=&quot;blahblah&quot; alt=&quot;&quot; src=&quot;../../../photos/firstday/DSC_0011.JPG&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;a class=&quot;blahblah&quot; href=&quot;../../../photos/firstday/DSC_0012.JPG&quot; data-title=&quot;../../../photos/firstday/DSC_0012.JPG&quot; data-lightbox=&quot;gallery1&quot;&gt;
-&lt;img class=&quot;blahblah&quot; alt=&quot;&quot; src=&quot;../../../photos/firstday/DSC_0012.JPG&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;p&gt;3&lt;/p&gt;
-&lt;div class=&quot;photoset-grid-lightbox&quot; data-layout=&quot;3&quot;&gt;
-
-  &lt;p&gt;&lt;a class=&quot;blahblah&quot; href=&quot;../../../photos/firstday/DSC_0007.JPG&quot; data-title=&quot;../../../photos/firstday/DSC_0007.JPG&quot; data-lightbox=&quot;gallery1&quot;&gt;
-&lt;img class=&quot;blahblah&quot; alt=&quot;&quot; src=&quot;../../../photos/firstday/DSC_0007.JPG&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;a class=&quot;blahblah&quot; href=&quot;../../../photos/firstday/DSC_0013.JPG&quot; data-title=&quot;../../../photos/firstday/DSC_0013.JPG&quot; data-lightbox=&quot;gallery1&quot;&gt;
-&lt;img class=&quot;blahblah&quot; alt=&quot;&quot; src=&quot;../../../photos/firstday/DSC_0013.JPG&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;a class=&quot;blahblah&quot; href=&quot;../../../photos/firstday/DSC_0021.JPG&quot; data-title=&quot;../../../photos/firstday/DSC_0021.JPG&quot; data-lightbox=&quot;gallery1&quot;&gt;
-&lt;img class=&quot;blahblah&quot; alt=&quot;&quot; src=&quot;../../../photos/firstday/DSC_0021.JPG&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;tutututut&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 05 Nov 2015 00:00:00 +0100</pubDate>
-        <link>http://127.0.0.1:4000/journal/day2.html</link>
-        <guid isPermaLink="true">http://127.0.0.1:4000/journal/day2.html</guid>
-        
-        
-        <category>journal</category>
-        
-      </item>
-    
-      <item>
-        <title>1er Jour</title>
-        <description>&lt;h1 id=&quot;toto&quot;&gt;TOTO&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;../../../photos/firstday/vertical-farming2-768x1024.jpg&quot; class=&quot;data-lightbox&quot;&gt;&lt;img src=&quot;../../../photos/firstday/thumbs/vertical-farming2-768x1024.jpg&quot; alt=&quot;vuvu&quot; /&gt;&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;../../../photos/firstday/DSC_0002.jpg&quot; class=&quot;data-lightbox&quot;&gt;&lt;img src=&quot;../../../photos/firstday/thumbs/DSC_0002.jpg&quot; alt=&quot;vuvu&quot; /&gt;&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;../../../photos/firstday/DSC_0003.JPG&quot; class=&quot;data-lightbox&quot;&gt;&lt;img src=&quot;../../../photos/firstday/thumbs/DSC_0003.JPG&quot; alt=&quot;vuvu&quot; /&gt;&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;../../../photos/firstday/DSC_0004.JPG&quot; class=&quot;data-lightbox&quot;&gt;&lt;img src=&quot;../../../photos/firstday/thumbs/DSC_0004.JPG&quot; alt=&quot;vuvu&quot; /&gt;&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;../../../photos/firstday/DSC_0006.JPG&quot; class=&quot;data-lightbox&quot;&gt;&lt;img src=&quot;../../../photos/firstday/thumbs/DSC_0006.JPG&quot; alt=&quot;vuvu&quot; /&gt;&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;../../../photos/firstday/DSC_0007.JPG&quot; class=&quot;data-lightbox&quot;&gt;&lt;img src=&quot;../../../photos/firstday/thumbs/DSC_0007.JPG&quot; alt=&quot;vuvu&quot; /&gt;&lt;/a&gt;&lt;br /&gt;
-&lt;a class=&quot;blahblah&quot; href=&quot;../../../photos/firstday/DSC_0006.JPG&quot; data-title=&quot;photos/firstday/DSC_0006.JPG&quot; data-lightbox=&quot;gallery1&quot;&gt;
-&lt;img class=&quot;blahblah&quot; alt=&quot;&quot; src=&quot;../../../photos/firstday/thumbs/DSC_0006.JPG&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 05 Nov 2015 00:00:00 +0100</pubDate>
-        <link>http://127.0.0.1:4000/journal/day1.html</link>
-        <guid isPermaLink="true">http://127.0.0.1:4000/journal/day1.html</guid>
-        
-        
-        <category>journal</category>
-        
-      </item>
-    
-      <item>
-        <title>Faire son blog avec Jekyll</title>
-        <description>&lt;style&gt;
-@import url(&quot;https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css&quot;);
-@import url(&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css&quot;);
-
-.aaa{
-color:red;
-}
-.bbb{
-font-size:15.5px;
-}
-.ccc{
-font-style: normal;
-}
-.blabla{
-color:steelblue;
-}
-.console {
-overflow:hidden;
-  font-family:Courier;
- color: #80FF80;
-  background: #000000;
-  //border: 3px double #CCCCCC;
-  padding: 10px;
-  width: 130px;
-}
-table{padding:0}table tr{border-top:1px solid #ccc;background-color:#fff;margin:0;padding:0}table tr:nth-child(2n){background-color:#aaa}table tr th{font-weight:700;border:1px solid #ccc;text-align:left;margin:0;padding:6px 13px}table tr td{border:1px solid #ccc;text-align:left;margin:0;padding:6px 13px}table tr td :first-child,table tr th :first-child{margin-top:0}table tr td:last-child,table tr th :last-child{margin-bottom:0}
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-th, td {
-    padding: 15px;
-}
-img{
-display: block;
-    margin: auto;
-    vertical-align: center;
-}
-img + edm {color:steelblue; text-align: center;}
-.caption {color:steelblue; text-align: center;}
-.left {
-    float:left;
-    width:100%;
-    max-width:300px;
-    padding-right:10px;
-}
-.right {
-    float:right;
-    width:100%;
-    max-width:300px;
-    padding-left:10px;
-}
-p.clear {
-    clear: both;
-}
-p.comment {
-vertical-align: center;
-text-align: justify;
-/*padding-left: 305px;*/
-/*padding-right: 5px;*/
-}
-&lt;/style&gt;
-
-&lt;h2 id=&quot;header0&quot; class=&quot;no_toc&quot;&gt;TOC&lt;/h2&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#titre2&quot; id=&quot;markdown-toc-titre2&quot;&gt;Titre2&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#titre3&quot; id=&quot;markdown-toc-titre3&quot;&gt;Titre3&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#header1&quot; id=&quot;markdown-toc-header1&quot;&gt;&lt;i class=&quot;fa fa-map-o fa-fw&quot;&gt;&lt;/i&gt; Mapping&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#les-shp&quot; id=&quot;markdown-toc-les-shp&quot;&gt;Les Shp&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#les-geojson&quot; id=&quot;markdown-toc-les-geojson&quot;&gt;Les GeoJson&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#blablaH&quot; id=&quot;markdown-toc-blablaH&quot;&gt;Blabla&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#header10&quot; id=&quot;markdown-toc-header10&quot;&gt;&lt;i class=&quot;fa fa-home fa-fw&quot;&gt;&lt;/i&gt; TOC&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#header1&quot; id=&quot;markdown-toc-header1&quot;&gt;&lt;i class=&quot;fa fa-folder-open-o fa-fw&quot;&gt;&lt;/i&gt; Titre1&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#header2&quot; id=&quot;markdown-toc-header2&quot;&gt;Titre2&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#header3&quot; id=&quot;markdown-toc-header3&quot;&gt;Titre3&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#header4&quot; id=&quot;markdown-toc-header4&quot;&gt;Titre4&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-
-&lt;h1 class=&quot;no_toc&quot; id=&quot;titre1&quot;&gt;Titre1&lt;/h1&gt;
-
-&lt;h2 id=&quot;titre2&quot;&gt;Titre2&lt;/h2&gt;
-
-&lt;h3 id=&quot;titre3&quot;&gt;Titre3&lt;/h3&gt;
-
-&lt;blockquote&gt;
-
-  &lt;p&gt;&lt;strong&gt;GAZ!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;/blockquote&gt;
-
-&lt;p class=&quot;caption&quot;&gt;&lt;img src=&quot;../../../images/new-york-945240_640.jpg&quot; alt=&quot;mapping&quot; title=&quot;TOTO&quot; /&gt;&lt;em&gt;Carte – source&lt;sup id=&quot;fnref:0&quot;&gt;&lt;a href=&quot;#fn:0&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p class=&quot;caption right&quot;&gt;&lt;img src=&quot;../../../images/new-york-945240_640.jpg&quot; alt=&quot;mapping&quot; title=&quot;TOTO&quot; class=&quot;right&quot; /&gt;&lt;em&gt;Carte – source&lt;sup id=&quot;fnref:0:1&quot;&gt;&lt;a href=&quot;#fn:0&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p class=&quot;caption&quot;&gt;&lt;em&gt;Carte – source2&lt;sup id=&quot;fnref:0:2&quot;&gt;&lt;a href=&quot;#fn:0&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p class=&quot;comment&quot;&gt;c’est genial ca qu’on a fait, blah blah blah, c’est genial ca qu’on a fait, blah blah blah, c’est genial ca qu’on a fait, blah blah blah, c’est genial ca qu’on a fait, blah blah blah, c’est genial ca qu’on a fait, blah blah blah, c’est genial ca qu’on a fait, blah blah blah, c’est genial ca qu’on a fait, blah blah blah, c’est genial ca qu’on a fait, blah blah blah, c’est genial ca qu’on a fait, blah blah blah.&lt;/p&gt;
-&lt;p class=&quot;caption clear&quot;&gt;&lt;em&gt;Carte – source2&lt;sup id=&quot;fnref:0:3&quot;&gt;&lt;a href=&quot;#fn:0&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p class=&quot;clear&quot;&gt;blabla&lt;/p&gt;
-
-&lt;p&gt;This is some text not written in &lt;abbr class=&quot;mega-big&quot; title=&quot;HyperTextMarkupLanguage&quot;&gt;HTML&lt;/abbr&gt; but in &lt;abbr title=&quot;It&#39;s called Markdown&quot;&gt;another language&lt;/abbr&gt;!&lt;/p&gt;
-
-&lt;blockquote&gt;
-
-  &lt;ul&gt;
-    &lt;li&gt;a&lt;/li&gt;
-    &lt;li&gt;b&lt;/li&gt;
-    &lt;li&gt;C&lt;/li&gt;
-  &lt;/ul&gt;
-
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(&quot;https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css&quot;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css&quot;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;    &lt;span class=&quot;c&quot;&gt;# write Fibonacci series up to n&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;Print a Fibonacci series up to n.&quot;&quot;&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;header1&quot;&gt;&lt;i class=&quot;fa fa-map-o fa-fw&quot;&gt;&lt;/i&gt; Mapping&lt;/h2&gt;
-
-&lt;blockquote class=&quot;blockquote-reverse&quot;&gt;
-  &lt;p&gt;Ouvrir les yeux sur le monde.&lt;br /&gt;
-&lt;em class=&quot;bbb ccc&quot;&gt;Beber in&lt;/em&gt; &lt;em class=&quot;bbb&quot;&gt;Des Armes&lt;/em&gt; —&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;iframe src=&quot;/map/leaflet_example.html&quot; style=&quot;width:100%;height:420px;&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;a href=&quot;../../../map/leaflet_example.html&quot;&gt;lien vers la carte&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;les-shp&quot;&gt;Les Shp&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hello World&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;les-geojson&quot;&gt;Les GeoJson&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;one&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;two&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h1 id=&quot;blablaH&quot; class=&quot;blabla&quot;&gt;Blabla&lt;/h1&gt;
-
-&lt;p&gt;This is some text.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. Other text.&lt;sup id=&quot;fnref:footnote&quot;&gt;&lt;a href=&quot;#fn:footnote&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.ou encore &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-
-&lt;p class=&quot;caption&quot;&gt;toto&lt;/p&gt;
-
-&lt;p&gt;footnote&lt;sup id=&quot;fnref:1:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;ul class=&quot;fa-ul list-inline&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#header4&quot;&gt;&lt;i class=&quot;fa-li fa fa-area-chart&quot; style=&quot;position: static;&quot;&gt;&lt;/i&gt;grap2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;i class=&quot;fa-li fa fa-bar-chart&quot; style=&quot;position: static;&quot;&gt;&lt;/i&gt;grap2&lt;/li&gt;
-  &lt;li&gt;&lt;i class=&quot;fa-li fa fa-pie-chart&quot; style=&quot;position: static;&quot;&gt;&lt;/i&gt;graph3&lt;/li&gt;
-  &lt;li&gt;&lt;i class=&quot;fa-li fa fa-rocket&quot; style=&quot;position: static;&quot;&gt;&lt;/i&gt;graph3&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;header10&quot;&gt;&lt;i class=&quot;fa fa-home fa-fw&quot;&gt;&lt;/i&gt; TOC&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#header1&quot;&gt;Titre1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#header2&quot;&gt;Titre2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#header3&quot;&gt;Titre3&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#header4&quot;&gt;Titre4&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p class=&quot;console&quot;&gt;&lt;samp&gt;**&amp;gt;_ Hello world !**&lt;/samp&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;em&gt;salut hombre !&lt;/em&gt;&lt;br /&gt;
-&lt;cite&gt;Toto&lt;/cite&gt;&lt;/p&gt;
-  &lt;footer&gt;
-    &lt;p&gt;toto&amp;lt;/footer&amp;gt;
-&lt;i class=&quot;fa fa-github-alt&quot;&gt;&lt;/i&gt;&lt;/p&gt;
-  &lt;/footer&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;salut hombre !&lt;br /&gt;
-– bob in &lt;strong&gt;LeGAz&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;It is the unofficial force—the Baker Street irregulars.&lt;br /&gt;
-– Sherlock Holmes, Sign of Four&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul class=&quot;aaa&quot;&gt;
-  &lt;li&gt;a&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul class=&quot;aaa&quot;&gt;
-  &lt;li&gt;b&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul class=&quot;aaa&quot;&gt;
-  &lt;li&gt;c&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table class=&quot;aaa&quot;&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;id&lt;/th&gt;
-      &lt;th&gt;name&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;beb&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;abbr title=&quot;Extra Gaz&quot;&gt;HTML2&lt;/abbr&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;header1&quot;&gt;&lt;i class=&quot;fa fa-folder-open-o fa-fw&quot;&gt;&lt;/i&gt; Titre1&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;#header0&quot;&gt;Link back to TOC&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Blah, BlahBlah&lt;br /&gt;
-&lt;em&gt;Ipsum&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This is &lt;em style=&quot;color: red&quot;&gt;red&lt;/em&gt;.&lt;br /&gt;
-This is &lt;em class=&quot;aaa&quot;&gt;red&lt;/em&gt;.&lt;/p&gt;
-
-&lt;blockquote class=&quot;aaa&quot;&gt;
-  &lt;p&gt;This is red.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;la ==balise== &lt;code class=&quot;highlighter-rouge&quot;&gt;bob&lt;/code&gt; envoie du code, et retourne &lt;samp&gt;OK&lt;/samp&gt; OK ?&lt;br /&gt;
-ou &lt;kbd&gt;Test&lt;/kbd&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;osm&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;geojson&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,{});&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;osm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addTo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;what?&lt;/span&gt;
-  &lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;blockquote class=&quot;aaa&quot;&gt;
-  &lt;p&gt;A nice blockquote&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;table class=&quot;table table-striped&quot;&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;id&lt;/th&gt;
-      &lt;th&gt;name&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;beb&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;table class=&quot;table table-striped&quot;&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Header1&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Header2&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Header3&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;i class=&quot;fa fa-leaf&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;http://yahoo.com&quot;&gt;cell2&lt;/a&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;cell3&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;i class=&quot;fa fa-car&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;http://github.com&quot;&gt;cell5&lt;/a&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;cell6&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;i class=&quot;fa fa-anchor&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;cell2&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;cell3&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;i class=&quot;fa fa-plane&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;cell5&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;cell6&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;i class=&quot;fa fa-beer&quot;&gt;&lt;/i&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Foot2&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;Foot3&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;ol class=&quot;aaa&quot;&gt;
-  &lt;li&gt;Item one
-    &lt;ol&gt;
-      &lt;li&gt;sub item one&lt;/li&gt;
-      &lt;li&gt;sub item two&lt;/li&gt;
-      &lt;li&gt;sub item three&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Item two
-    &lt;ol&gt;
-      &lt;li&gt;sub item one&lt;/li&gt;
-      &lt;li&gt;sub item two&lt;/li&gt;
-      &lt;li&gt;sub item three&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;ssss&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    print toto
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  graph TD;A--&amp;gt;B;A--&amp;gt;C;B--&amp;gt;D;C--&amp;gt;D;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;header2&quot;&gt;Titre2&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;#header0&quot;&gt;Link back to TOC&lt;/a&gt;&lt;br /&gt;
-SO&lt;sub&gt;2&lt;/sub&gt;&lt;br /&gt;
-km&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;header3&quot;&gt;Titre3&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;#header0&quot;&gt;Link back to TOC&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;header4&quot;&gt;Titre4&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;#header0&quot;&gt;Link back to TOC&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:0&quot;&gt;
-      &lt;p&gt;https://pixabay.com &lt;a href=&quot;#fnref:0&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:0:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; &lt;a href=&quot;#fnref:0:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; &lt;a href=&quot;#fnref:0:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;Some &lt;em&gt;crazy&lt;/em&gt; footnote definition. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:1:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:footnote&quot;&gt;
-
-      &lt;blockquote&gt;
-        &lt;p&gt;Blockquotes can be in a footnote.&lt;/p&gt;
-      &lt;/blockquote&gt;
-      &lt;p&gt;&lt;a href=&quot;#fnref:footnote&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;bobby &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Mon, 02 Nov 2015 00:00:00 +0100</pubDate>
-        <link>http://127.0.0.1:4000/2015/11/02/firstpost.html</link>
-        <guid isPermaLink="true">http://127.0.0.1:4000/2015/11/02/firstpost.html</guid>
-        
         
       </item>
     
