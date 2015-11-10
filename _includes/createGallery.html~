@@ -1,0 +1,64 @@
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<link rel="stylesheet" href="../../lightbox2-master/dist/css/lightbox.css">
+<script src="https://raw.githubusercontent.com/stylehatch/photoset-grid/master/jquery.photoset-grid.min.js"></script>
+<style TYPE="text/css">
+.gallery-image-wrapper {
+  height: 300px;
+  width: 300px;
+  display: inline-block;
+  margin: 1em;
+  position: relative;
+}
+.gallery-image {
+  margin: auto;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  max-height: 100%;
+  max-width: 100%;
+}
+</style>
+
+<div class="photoset-grid-lightbox">
+        <a class="blahblah" href="{{ include.param }}" data-title="{{ include.param }}" data-lightbox="gallery1">
+            <img class="blahblah" alt="" src="{{ include.param }}" />
+        </a>
+
+
+{% for image in  include.variable-param  %}
+        <a class="blahblah" href="{{image}}" data-title="{{image}}" data-lightbox="gallery1">
+            <img class="blahblah" alt="" src="{{image}}" />
+        </a>
+{% endfor %}
+</div>
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		$('.photoset-grid-lightbox').photosetGrid({
+			highresLinks: true,
+  			rel: 'aaa',
+  			gutter: '1px',
+  			layout: '{{include.variable-param2}}',
+  			lowresWidth: 300,
+  			borderActive:true,
+  			borderWidth: '1px',
+    		borderColor: '#fff',
+    		borderRadius: '1px',
+
+ 			onComplete: function(){
+   				$('.photoset-grid-lightbox').attr('style', '');
+    			/*$('.photoset-grid-lightbox a').colorbox({
+      				photo: true,
+      				scalePhotos: true,
+      				maxHeight:'100%',
+      				maxWidth:'100%',
+      				rel: 'aaa',
+      				loop:true,
+      				overlayClose:true
+    			});*/
+  			}
+		});
+		
+});
+	</script>
+{% include scriptLightbox.html %}

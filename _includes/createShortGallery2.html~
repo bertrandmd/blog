@@ -1,0 +1,9 @@
+<div class="photoset-grid-lightbox" data-layout="131" style="visibility: hidden;">
+  <img src="/images/1.jpg"  data-highres="/images/1.jpg">
+  <img src="/images/2.jpg"  data-highres="/images/2.jpg">
+  <img src="/images/3.jpg"  data-highres="/images/3.jpg">
+  <img src="/images/4.jpg"  data-highres="/images/4.jpg">
+  <img src="/images/5.jpg"  data-highres="/images/5.jpg">
+</div>
+
+

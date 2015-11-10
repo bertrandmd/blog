@@ -1,0 +1,6 @@
+---
+layout: default
+title: diaries
+---
+
+{% include category.html %}

@@ -1,0 +1,44 @@
+---
+layout: page
+---
+{% include headFancybox.html %}
+<style TYPE="text/css">
+.gallery-image-wrapper {
+  height: 300px;
+  width: 300px;
+  display: inline-block;
+  margin: 1em;
+  position: relative;
+}
+.gallery-image {
+  margin: auto;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  max-height: 100%;
+  max-width: 100%;
+}
+		.fancybox-overlay
+{
+    line-height: normal;    
+}
+ 
+
+.fancybox-wrap, .fancybox-wrap *{
+    -moz-box-sizing: content-box !important;
+    -webkit-box-sizing: content-box !important;
+    -safari-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+}
+
+</style>
+<h1><a href="/{{ site.gallery.dir }}">{{ page.title }}</a></h1>
+<hr />
+{% for image in page.images %}
+        <a class="fancybox" href="{{ image }}" name="{{ image }}" rel="gallery1">
+            <img alt="" src="thumbs/{{ image }}" />
+        </a>
+
+{% endfor %}
+
+{% include scriptFancybox.html %}

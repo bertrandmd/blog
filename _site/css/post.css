@@ -1,0 +1,60 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css");
+
+.aaa{
+color:red;
+}
+.bbb{
+font-size:15.5px;
+}
+.ccc{
+font-style: normal;
+}
+.blabla{
+color:steelblue;
+}
+.console {
+overflow:hidden;
+  font-family:Courier;
+ color: #80FF80;
+  background: #000000;
+  //border: 3px double #CCCCCC;
+  padding: 10px;
+  width: 130px;
+}
+table{padding:0}table tr{border-top:1px solid #ccc;background-color:#fff;margin:0;padding:0}table tr:nth-child(2n){background-color:#aaa}table tr th{font-weight:700;border:1px solid #ccc;text-align:left;margin:0;padding:6px 13px}table tr td{border:1px solid #ccc;text-align:left;margin:0;padding:6px 13px}table tr td :first-child,table tr th :first-child{margin-top:0}table tr td:last-child,table tr th :last-child{margin-bottom:0}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+}
+img{
+display: block;
+    margin: auto;
+    vertical-align: center;
+}
+img + edm {color:steelblue; text-align: center;}
+.caption {color:steelblue; text-align: center;}
+.left {
+    float:left;
+    width:100%;
+    max-width:300px;
+    padding-right:10px;
+}
+.right {
+    float:right;
+    width:100%;
+    max-width:300px;
+    padding-left:10px;
+}
+p.clear {
+    clear: both;
+}
+p.comment {
+vertical-align: center;
+text-align: justify;
+/*padding-left: 305px;*/
+/*padding-right: 5px;*/
+}

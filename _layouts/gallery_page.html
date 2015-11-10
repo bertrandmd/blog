@@ -1,0 +1,44 @@
+---
+layout: page
+custom_css:
+  - colorbox
+custom_js:
+  - jquery-2.1.4
+  - jquery.photoset-grid.min
+  - jquery.colorbox
+---
+
+<style TYPE="text/css">
+.gallery-image-wrapper {
+  height: 300px;
+  width: 300px;
+  display: inline-block;
+  margin: 1em;
+  position: relative;
+}
+.gallery-image {
+  margin: auto;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  max-height: 100%;
+  max-width: 100%;
+}
+</style>
+<h1><a href="/{{ site.gallery.dir }}">{{ page.title }}</a></h1>
+<hr />
+
+<div class="photoset-grid-lightbox">
+{% for image in page.images %}
+
+            <img alt="" src="thumbs/{{ image }}"  data-highres="{{image}}"/>
+
+{% endfor %}
+</div>
+{% include scriptPhotoGrid3.html variable-param2='444444444444444444444444' %}
+<script>
+$('.photoset-grid-lightbox').photosetGrid({
+		
+  			layout: '444444444444444444444444',
+  			lowresWidth: 300});
+</script>

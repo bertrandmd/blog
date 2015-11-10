@@ -1,0 +1,26 @@
+<div class="photoset-grid-lightbox" data-layout="{{include.variable-param2}}">
+
+{% for image in  include.variable-param  %}
+
+<a class="blahblah" href="{{image}}" data-title="{{image}}" data-lightbox="gallery1">
+<img class="blahblah" alt="" src="{{image}}" />
+</a>
+
+{% endfor %}
+
+</div>
+{{include.toto.size}}
+<div class="photoset-grid-lightbox" data-layout="3">
+{% for image in include.toto %}
+<a class="blahblah" href="{{image}}" data-title="{{image}}" data-lightbox="gallery1">
+<img class="blahblah" alt="" src="{{image}}" />
+</a>
+{% endfor %}
+</div>
+{{include.toto.content}}
+
+{{include[toto].content}}
+
+{% if include.toto %}}
+{{include.toto.content}}
+{% endif %}

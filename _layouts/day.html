@@ -1,0 +1,66 @@
+---
+layout: default
+---
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<link rel="stylesheet" href="../../lightbox2-master/dist/css/lightbox.css">
+<script src="https://raw.githubusercontent.com/stylehatch/photoset-grid/master/jquery.photoset-grid.min.js"></script>
+<style TYPE="text/css">
+.gallery-image-wrapper {
+  height: 300px;
+  width: 300px;
+  display: inline-block;
+  margin: 1em;
+  position: relative;
+}
+.gallery-image {
+  margin: auto;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  max-height: 100%;
+  max-width: 100%;
+}
+</style>
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+<div class="photoset-grid-lightbox">
+    {{ content }}
+  </div>
+  </div>
+</article>
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		$('.photoset-grid-lightbox').photosetGrid({
+			highresLinks: true,
+  			rel: 'aaa',
+  			gutter: '1px',
+  			layout: '324',
+  			lowresWidth: 300,
+  			borderActive:true,
+  			borderWidth: '1px',
+    		borderColor: '#fff',
+    		borderRadius: '1px',
+
+ 			onComplete: function(){
+   				$('.photoset-grid-lightbox').attr('style', '');
+    			/*$('.photoset-grid-lightbox a').colorbox({
+      				photo: true,
+      				scalePhotos: true,
+      				maxHeight:'100%',
+      				maxWidth:'100%',
+      				rel: 'aaa',
+      				loop:true,
+      				overlayClose:true
+    			});*/
+  			}
+		});
+		
+});
+</script>

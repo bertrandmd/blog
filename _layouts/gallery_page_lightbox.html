@@ -1,0 +1,28 @@
+---
+layout: page
+---
+<style TYPE="text/css">
+.gallery-image-wrapper {
+  height: 300px;
+  width: 300px;
+  display: inline-block;
+  margin: 1em;
+  position: relative;
+}
+.gallery-image {
+  margin: auto;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  max-height: 100%;
+  max-width: 100%;
+}
+</style>
+<h1><a href="/{{ site.gallery.dir }}">{{ page.title }}</a></h1>
+<hr />
+{% for image in page.images %}
+        <a class="blahblah" href="{{ image }}" data-title="{{ image }}" data-lightbox="gallery1">
+            <img class="blahblah" alt="" src="thumbs/{{ image }}" />
+        </a>
+{% endfor %}
+{% include scriptLightbox.html %}

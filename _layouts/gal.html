@@ -1,0 +1,24 @@
+---
+title: toto
+layout: default
+
+---
+<!--
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<link rel="stylesheet" href="../../../lightbox2-master/dist/css/lightbox.css">
+<script src="https://raw.githubusercontent.com/stylehatch/photoset-grid/master/jquery.photoset-grid.min.js"></script>
+-->
+{% assign custom_css = "lightbox|custom_gallery" | split: "|" %}
+{{ page.layout.custom_css }}
+      <div class="wrapper">
+
+        {{ content }}
+      
+
+{% if page.liste %}
+	{% include createShortGallery.html variable-param=page.liste variable-param2=page.grid %}
+{% endif %}
+
+{% include scriptPhotoGrid.html variable-param2=include.variable-param2 %}
+{% include scriptLightbox.html %}
+</div>
