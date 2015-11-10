@@ -1,0 +1,28 @@
+---
+layout: post
+---
+<div class="photoset-grid-lightbox">
+
+        <a class="blahblah" href="photos/firstday/vertical-farming2-768x1024.jpg" data-title="vertical-farming2-768x1024.jpg" data-lightbox="gallery1">
+            <img class="blahblah" alt="" src="photos/firstday/thumbs/vertical-farming2-768x1024.jpg" />
+        </a>
+
+        <a class="blahblah" href="photos/firstday/DSC_0002.jpg" data-title="DSC_0002.jpg" data-lightbox="gallery1">
+            <img class="blahblah" alt="" src="photos/firstday/thumbs/DSC_0002.jpg" />
+        </a>
+
+        <a class="blahblah" href="DSC_0003.JPG" data-title="photos/firstday/DSC_0003.JPG" data-lightbox="gallery1">
+            <img class="blahblah" alt="" src="photos/firstday/thumbs/DSC_0003.JPG" />
+        </a>
+
+        <a class="blahblah" href="DSC_0004.JPG" data-title="photos/firstday/DSC_0004.JPG" data-lightbox="gallery1">
+            <img class="blahblah" alt="" src="photos/firstday/thumbs/DSC_0004.JPG" />
+        </a>
+
+        <a class="blahblah" href="photos/firstday/DSC_0005.JPG" data-title="DSC_0005.JPG" data-lightbox="gallery1">
+            <img class="blahblah" alt="" src="photos/firstday/thumbs/DSC_0005.JPG" />
+        </a>
+
+        <a class="blahblah" href="DSC_0006.JPG" data-title="photos/firstday/DSC_0006.JPG" data-lightbox="gallery1">
+            <img class="blahblah" alt="" src="photos/firstday/thumbs/DSC_0006.JPG" />
+</div>

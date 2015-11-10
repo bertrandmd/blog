@@ -1,0 +1,48 @@
+---
+categories : journal
+permalink : /:categories/:title.html
+layout: gal
+title: 2e Jour
+grid : 2123
+custom_css:
+  - post
+  - lightbox
+  - custom_gallery
+custom_js:
+  - jquery-2.1.4
+  - jquery.photoset-grid.min
+liste:
+  - photos/firstday/DSC_0002.jpg
+  - ../photos/firstday/DSC_0017.JPG
+  - /photos/firstday/DSC_0007.JPG
+  - ../../../photos/firstday/DSC_0021.JPG
+  - ../../../photos/firstday/DSC_0007.JPG
+  - ../../../photos/firstday/DSC_0013.JPG
+  - ../../../photos/firstday/DSC_0007.JPG
+popup:
+  - ../../../photos/firstday/DSC_0010.JPG
+  - ../../../photos/firstday/DSC_0011.JPG
+  - ../../../photos/firstday/DSC_0012.JPG
+---
+
+# Jour 2
+
+## La suite de nos aventure
+{% assign somevar = "../../../photos/firstday/DSC_0007.JPG|../../../photos/firstday/DSC_0013.JPG|../../../photos/firstday/DSC_0021.JPG" | split: "|" %}
+{{ somevar }}
+
+![toto](/photos/firstday/DSC_0013.JPG)
+{: .left}
+blablabla
+blablabla
+et ca aussi 
+{% assign my_array = "one|two|three" | split: "|" %}
+{{[my_array].content}}
+{% include createShortGallery.html toto=somevar variable-param=page.popup variable-param2=3 %}
+tutututut
+
+{% comment %}
+{% include createShortGallery.html toto=page.my_array variable-param=page.liste variable-param2=page.grid %} 
+{% endcomment %}
+
+

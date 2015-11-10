@@ -1,0 +1,43 @@
+---
+categories : journal
+permalink : /:categories/:title.html
+layout: post
+title: Un peu de réflexion
+author: bebs_jacou
+custom_css:
+  - post
+  - colorbox
+custom_js:
+  - jquery-2.1.4
+  - jquery.photoset-grid.min
+  - jquery.colorbox
+popup:
+  - /photos/firstday/DSC_0010.JPG
+  - /photos/firstday/DSC_0011.JPG
+  - /photos/firstday/DSC_0012.JPG
+---
+
+# Et pourquoi pas ?
+
+Encore une fois il faut choisir.
+Si le `choix` est **simple**, ce n'est pas le cas de tout le monde.
+
+voyons ces quelques photos prisent à **Tokyo** à l'hôtel [*Boubou*](www.boubou.com)
+{% include createShortGallery2.html variable-param=page.popup variable-param2=21 %}
+
+{% comment %}
+{% include createShortGallery.html variable-param=page.popup variable-param2=3 %}
+{% include createShortGallery.html variable-param=page.liste variable-param2=page.grid %} 
+{% endcomment %}
+
+Plaisir d'offrir, joie de recevoir, n'est-ce pas ?
+
+![youhou](/photos/firstday/DSC_0012.JPG)*C'est beau non ?*
+{: .caption}
+J'adore ces paysages.
+
+blabla
+{: .clear}
+{% include scriptPhotoGrid3.html variable-param2=21 %}
+
+

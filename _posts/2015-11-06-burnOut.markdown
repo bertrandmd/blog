@@ -1,0 +1,15 @@
+---
+categories : divers
+permalink : /:categories/:title.html
+layout: post
+title: houhou
+custom_css: 
+  - lightbox
+  - custom_gallery
+custom_js:
+  - jquery-2.1.4
+  - jquery.photoset-grid.min
+---
+
+# !!!!
+

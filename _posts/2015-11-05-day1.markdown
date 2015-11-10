@@ -1,0 +1,19 @@
+---
+categories : journal
+permalink : /:categories/:title.html
+layout: day
+title: 1er Jour
+---
+
+
+# TOTO
+
+[![vuvu](../../../photos/firstday/thumbs/vertical-farming2-768x1024.jpg)](../../../photos/firstday/vertical-farming2-768x1024.jpg){: .data-lightbox}
+[![vuvu](../../../photos/firstday/thumbs/DSC_0002.jpg)](../../../photos/firstday/DSC_0002.jpg){: .data-lightbox}
+[![vuvu](../../../photos/firstday/thumbs/DSC_0003.JPG)](../../../photos/firstday/DSC_0003.JPG){: .data-lightbox}
+[![vuvu](../../../photos/firstday/thumbs/DSC_0004.JPG)](../../../photos/firstday/DSC_0004.JPG){: .data-lightbox}
+[![vuvu](../../../photos/firstday/thumbs/DSC_0006.JPG)](../../../photos/firstday/DSC_0006.JPG){: .data-lightbox}
+[![vuvu](../../../photos/firstday/thumbs/DSC_0007.JPG)](../../../photos/firstday/DSC_0007.JPG){: .data-lightbox}
+<a class="blahblah" href="../../../photos/firstday/DSC_0006.JPG" data-title="photos/firstday/DSC_0006.JPG" data-lightbox="gallery1">
+<img class="blahblah" alt="" src="../../../photos/firstday/thumbs/DSC_0006.JPG" />
+

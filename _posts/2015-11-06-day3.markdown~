@@ -1,0 +1,38 @@
+---
+categories : journal
+permalink : /:categories/:title.html
+layout: gal2
+title: 3e Jour
+grid : 2122
+custom_css:
+  - post
+  - custom_gallery
+  - colorbox
+custom_js:
+  - jquery-2.1.4
+  - jquery.photoset-grid.min
+  - jquery.colorbox
+liste:
+  - /photos/firstday/DSC_0014.JPG
+  - ../photos/firstday/DSC_0017.JPG
+  - /photos/firstday/DSC_0007.JPG
+  - ../../../photos/firstday/DSC_0021.JPG
+  - ../../../photos/firstday/DSC_0007.JPG
+  - ../../../photos/firstday/DSC_0019.JPG
+  - ../../../photos/firstday/DSC_0004.JPG
+popup:
+  - ../../../photos/firstday/DSC_0010.JPG
+  - ../../../photos/firstday/DSC_0011.JPG
+  - ../../../photos/firstday/DSC_0012.JPG
+---
+
+# Jour 3
+
+## La bringue
+
+{% comment %}
+{% include createShortGallery.html variable-param=page.popup variable-param2=3 %}
+{% include createShortGallery.html variable-param=page.liste variable-param2=page.grid %} 
+{% endcomment %}
+
+

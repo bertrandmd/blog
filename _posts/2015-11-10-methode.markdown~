@@ -1,0 +1,49 @@
+---
+layout : post
+title: debut methodo
+categorie: qualité
+tag: méthodo
+author: BMD
+custom_css : posts
+---
+
+toto
+====
+
+A
+---
+
+## Titre 2
+
+TOC {#header0}
+---
+{: .no_toc}
+
+* TOC
+{:toc}
+---
+
+a|b|c
+---|---|---
+1|2|3
+4|5|6
+
+# Titre1
+---
+{: .no_toc}
+
+## Titre2
+
+### Titre3
+
+# Début de la méthodo
+
+## Début de la méthodo
+
+### Début de la méthodo
+
+#### Début de la méthodo
+
+##### Début de la méthodo
+
+blahblah
