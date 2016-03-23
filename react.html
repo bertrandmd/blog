@@ -1,0 +1,192 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="The simplest React Element">
+  <script src="https://fb.me/react-0.14.7.js"></script>
+  <script src="https://fb.me/react-dom-0.14.7.js"></script>
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+ <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style media="screen">
+    #map { height: 180px; }
+  </style>
+</head>
+<body>
+
+  <div id="anchor"></div>
+<button id="toto" onmouseover="this.innerHTML=Date()" onmouseout="this.innerHTML='Salut Bobby !'">The time is?</button>
+<p>Vous avez vu cette page <span id="visites"></span> fois</p>
+<div >
+    <table id="tableau">
+      <thead>
+        <th>
+          nom
+        </th>
+        <th>
+          art
+        </th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            lo
+          </td>
+          <td>
+            fi
+          </td>
+        </tr>
+      </tbody>
+<div id="map"></div>
+
+    </table>
+</div>
+<span id="loader" style="display: none;"><img src="ajax-loader.gif" alt="loading" /></span>
+  <script>
+
+  var mountNode = document.getElementById('anchor');
+
+  var reactElement = React.createElement('p', {}, "Hello, World!");
+
+document.oncontextmenu = function(){alert("oh !!");}
+
+ReactDOM.render(reactElement, mountNode);
+
+document.getElementById('toto').onclick = function(){console.log("zavier");}
+
+document.getElementById('toto').addEventListener("click",function(){
+  console.log(reactElement)
+})
+
+//map
+var addr =  "https://gist.githubusercontent.com/bertrandmd/24820fd89eb4fce2f4b2/raw/6b5d27c3ae533db0b918ea4e0c6c70436c208787/map.geojson"
+var map = L.map('map').setView([43.667871610117494,3.2684326171875], 13);
+var osm =  L.tileLayer('http://{s}.tile.openstreetmap.se/hydda/full/{z}/{x}/{y}.png').addTo(map);
+var geojson = L.geoJson(null,{}
+).addTo(map);
+
+if(typeof localStorage!='undefined') {
+  // Récupération de la valeur dans web storage
+  var storedGeojson = localStorage.getItem('geojson');
+  // Vérification de la présence du compteur
+  if(storedGeojson!=null) {
+      geojson.addData(JSON.parse(storedGeojson));
+      map.fitBounds(geojson.getBounds());
+  }
+} else {
+    alert("localStorage n'est pas supporté");
+}
+
+request(addr, showData2);
+function showData2(data) {
+  console.log(JSON.parse(data));
+  //tutu = JSON.parse(data);
+  localStorage.setItem("geojson",data);
+  //var geojson = L.geoJson(JSON.parse(data),{}
+	//).addTo(map);
+  geojson.addData(JSON.parse(data));
+  map.fitBounds(geojson.getBounds());
+}
+
+
+
+
+
+
+function request(target,callback) {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+  	if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+  		callback(xhr.responseText);
+      document.getElementById("loader").style.display = "none";
+  	}
+    else if (xhr.readyState < 4) {
+			document.getElementById("loader").style.display = "inline";
+      if (xhr.status == 404){
+        document.getElementById("loader").style.display = "none";
+        alert("Not found");
+      }
+		}
+  };
+  xhr.open("GET", target, true);
+  xhr.send(null);
+}
+function showData(data) {
+  console.log(JSON.parse(data));
+  tutu = JSON.parse(data);
+  localStorage.setItem("members",data);
+  var old = nbmembers()
+  resetTableau(old);
+  for (a in tutu){
+    //localStorage.setItem(a,tutu[a]);
+    updateTableau([a,tutu[a]])
+  };
+}
+request("toto.json", showData);
+
+var resetTableau = function (nb) {
+  var table = document.getElementById('tableau')
+  var i = 0 ;
+  while (i < nb){
+    table.deleteRow(2)
+    i++
+  }
+}
+
+
+var updateTableau = function (data) {
+  var table = document.getElementById('tableau')
+  var row = table.insertRow();
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  cell1.innerHTML = data[0];
+  cell2.innerHTML = data[1];
+}
+
+
+//init
+//closure
+var nbmembers = (function () {
+  var storedMembers = localStorage.getItem('members') || "{}";
+  var countMember = 0
+  if(storedMembers!=null) {
+    storedMembers = JSON.parse(storedMembers);
+    for (member in storedMembers){
+      updateTableau([member, storedMembers[member]])
+      countMember ++;
+    }
+    return function () {
+      return countMember
+    }
+  }
+})();
+
+console.log(nbmembers())
+
+// Détection
+if(typeof localStorage!='undefined') {
+  // Récupération de la valeur dans web storage
+  var nbvisites = localStorage.getItem('visites');
+  // Vérification de la présence du compteur
+  if(nbvisites!=null) {
+    // Si oui, on convertit en nombre entier la chaîne de texte qui fut stockée
+    nbvisites = parseInt(nbvisites);
+  } else {
+    nbvisites = 1;
+  }
+  // Incrémentation
+  nbvisites++;
+  // Stockage à nouveau en attendant la prochaine visite...
+  localStorage.setItem('visites',nbvisites);
+  // Affichage dans la page
+  document.getElementById('visites').innerHTML = nbvisites;
+} else {
+  alert("localStorage n'est pas supporté");
+}
+
+  </script>
+</body>
+</html>
